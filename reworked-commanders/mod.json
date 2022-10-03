@@ -6,7 +6,11 @@
 	"author" : "Concept and most Commanders' graphics - WoG Team; New Commanders Mod - Avatar support and MinosKing; Werewolf def - MDT; Orange Orc def - HotA Team; Idea and implemetation - Andruids; Sunseeker def - Andruids, based on Kuririn's Crusader; Totem def - Andruids, based on Rettosukero's Wendigo.",
 	"contact" : "",
 	"modType" : "Creatures",
-	
+	"compatibility" :
+	{
+		"min" : "1.0.0",
+		"max" : "1.0.0"
+	},	
 	"creatures" :
 	[
         "config/commander/astralSpirit.json",
