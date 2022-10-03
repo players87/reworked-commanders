@@ -1,0 +1,228 @@
+{
+	"gnollShaman":
+	{
+		"name" :
+		{
+			"plural" : "Shamans",
+			"singular" : "Shaman"
+		},
+		"faction" : "fortress",
+		"level": 0,
+		"aiValue" : 5931,
+		"special" : true,
+		"attack" : 5,
+		"defense" : 5,
+		"damage" :
+		{
+			"min" : 8,
+			"max" : 16
+		},
+		"fightValue" : 5272,
+		"graphics" :
+		{
+			"animation" : "battle/commander/GnollShaman.def",
+			"iconSmall" : "iconsSmall/GnollShamanS.bmp",
+			"iconLarge" : "iconsBig/GnollShamanB.bmp",
+			"timeBetweenFidgets" : 1,
+			"animationTime" :
+			{
+				"walk" : 1.00,
+				"idle" : 10.00,
+				"attack" : 1.00,
+				"flight" : 1.00
+			},
+			"missile" :
+			{
+				"projectile" : "battle/commander/projectile/ShamShot.def",
+				"attackClimaxFrame" : 8,
+				"offset" :
+				{
+					"upperX" : 48,
+					"upperY" : -93,
+					"middleX" : 64,
+					"middleY" : -78,
+					"lowerX" : 25,
+					"lowerY" : -93
+				},
+				"frameAngles" : [90, 72, 45, 27, 0, -27, -45, -72, -90, 0, 0, 0]
+
+			}
+		},
+		"doubleWide" : false,
+		"growth" : 1,
+		"hitPoints" : 50,
+		"speed" : 5,
+            "shots" : 0,
+		"sound" :
+		{
+			"attack": "AMAGATTK.wav",
+			"defend": "GNOLDFND.wav",
+			"killed": "AMAGKILL.wav",
+			"move": "AMAGMOVE.wav",
+			"shoot": "AMAGSHOT.wav",
+			"wince": "GNOLWNCE.wav"
+		},
+		"abilities" :
+		{
+
+        		"shooter" :
+			{
+				"type" : "SHOOTER"
+			},
+				"halved shots" :
+			{
+				"type" : "SHOTS","val" : -50,"valueType" : "PERCENT_TO_ALL",
+				"limiters": ["noneOf",{"type" : "HAS_ANOTHER_BONUS_LIMITER","parameters": [ "ENCHANTED", "spell.shootingEnchant" ]}]
+			},
+
+			//przyzwanie machiny
+			"totemSummoner" :
+			{
+				"type" : "ENCHANTER",
+				"subtype" : "spell.summonTotem",
+				"val" : 0,
+				"addInfo" : 0,
+				"limiters": [
+					[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machineSummoned"]	},
+										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machinePriority"]	},
+										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "ENCHANTED", "spell.abilityEnchant"]	} ]
+							]
+			},
+
+			//silniejsze przyzwanie machiny
+			"totemSummoner2" :
+			{
+				"type" : "ENCHANTER",
+				"subtype" : "spell.summonTotem",
+				"val" : 3,
+				"addInfo" : 0,
+				"limiters": [
+					[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machineSummoned"]	},
+										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machinePriority"]	} ],
+					[ "allOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "ENCHANTED", "spell.abilityEnchant"]	} ]
+							]
+			},
+
+			//zeby machina zostala przyzwana na samym poczatku walki
+			"firstTurnSummon" :
+			{
+				"type" : "ENCHANTED",
+				"subtype" : "spell.machinePriority",
+				"addInfo" : 0,
+				"limiters": [ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machinePriority"]	} ]
+			},
+
+			//moc rzucania ograniczona do 1, zeby przyzwac tylko jedna machine
+			"spellpowerLimit" :
+			{
+				"type" : "CREATURE_SPELL_POWER",
+				"val" : 100,
+				"valueType" : "INDEPENDENT_MIN",
+				"limiters": [ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machineSummoned"]	},
+										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machinePriority"]	} ]
+			},	
+
+			"magicResistance" :
+			{
+				"type" : "MAGIC_RESISTANCE",
+				"val" : 5
+			},
+			"castsAmount" :
+			{
+				"type" : "CASTS",
+				"val" : 1
+			},
+			//"enchant" :{"type" : "CREATURE_ENCHANT_POWER","val" : 2	}, //needless?
+			"spellpower" :
+			{
+				"type" : "CREATURE_SPELL_POWER",
+				"val" : 100
+			},
+
+			//sprawia ze przeciwnik po zaatakowaniu totem, aktywuje na nim klatwe
+			"retaliativeCurse" :
+			{
+				"type" : "SPELL_AFTER_ATTACK",
+				"subtype" : "spell.totemsCurseTrigger",
+				"val" : 100,
+				"addInfo" : [0,2],
+				"effectRange" : "ONLY_ENEMY_ARMY"
+			},
+			
+			//naklada efekt na jednostki wroga, ktory wskazuje jednostki bedace pod wplywem klatwy, kiedy zostanie "aktywowany" (zaatakowany) totem
+            "totemsCurseTargets" : {
+                "val" : 100,
+                    "type" : "MORE_DAMAGE_FROM_SPELL",
+                    "subtype" : "spell.totemsCurseTrigger",            
+				"effectRange" : "ONLY_ENEMY_ARMY"
+            },		
+
+			"noAttacking" : 
+			{
+				"type" : "ENCHANTED",
+				"subtype" : "spell.machineNoAttack",
+				"val" : 4
+			},	
+			
+			"canCast" :
+			{
+				"type" : "SPELLCASTER",
+				"subtype" : "spell.haste",
+				"val" : 3,		
+				"limiters": [ 
+					"noneOf",
+					{
+						"type" : "HAS_ANOTHER_BONUS_LIMITER",
+						"parameters": [ "ENCHANTED", "spell.spellEnchant" ]
+					}
+					]
+				  },			
+				  "canCast+" :
+				  {
+					  "type" : "SPELLCASTER",
+					  "subtype" : "spell.windOfAgitation",
+					  "val" : 3,		
+					  "limiters": [ 
+						  "allOf",
+						  {
+							  "type" : "HAS_ANOTHER_BONUS_LIMITER",
+							  "parameters": [ "ENCHANTED", "spell.spellEnchant" ]
+						  }
+						  ]
+						},
+					
+						//zeby zatrzymac wiezyczki/katapulte przed przyzwaniem duszka
+						"stopSiegeMachines" :
+						{
+							"type" : "ENCHANTED",
+							"subtype" : "spell.siegeLimiter1",
+							"propagator" : "BATTLE_WIDE",
+							"addInfo" : 0,
+							"limiters": [
+								[ "noneOf", 
+													{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.siegeLimiterOff"]	} ],
+								[ "anyOf", 
+									{"type" : "CREATURE_TYPE_LIMITER", 
+										"parameters" : [ "catapult", true]},
+										{"type" : "CREATURE_TYPE_LIMITER", 
+											"parameters" : [ "arrowTower", true]} ]
+										]
+						},
+							"siegeMachinesTargets" :
+							{
+								"type" : "MORE_DAMAGE_FROM_SPELL",
+								"subtype" : "spell.siegeLimiter1",
+								"propagator" : "BATTLE_WIDE",
+								"val" : 100
+							},
+
+						
+		"aoeShots" :
+		{
+			"type" : "ENCHANTED",
+			"subtype" : "spell.naturesWrathEnchant",
+			"limiters": [ "allOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "ENCHANTED", "spell.shootingEnchant"]	} ]
+		}
+		}
+	}
+}

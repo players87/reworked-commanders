@@ -1,0 +1,51 @@
+{
+	"name" : "Reworked Commanders",
+	"description" : "Reworked commanders for original factions. Loosely based on abilities and design of WoG commanders.",
+	
+	"version" : "1.11",
+	"author" : "Concept and most Commanders' graphics - WoG Team; New Commanders Mod - Avatar support and MinosKing; Werewolf def - MDT; Orange Orc def - HotA Team; Idea and implemetation - Andruids; Sunseeker def - Andruids, based on Kuririn's Crusader; Totem def - Andruids, based on Rettosukero's Wendigo.",
+	"contact" : "",
+	"modType" : "Creatures",
+	
+	"creatures" :
+	[
+        "config/commander/astralSpirit.json",
+        "config/commander/warmonger",	
+        "config/commander/soulEater.json",
+        "config/commander/hierophant.json",		
+        "config/commander/gnollShaman.json",
+        "config/commander/paladin.json",	
+        "config/commander/succub.json",
+        "config/commander/brutus.json",     	
+        "config/commander/templeGuard.json",  	
+        "config/creatures/ogreBallista.json",  	
+        "config/creatures/shamanTotem.json",  		
+        "config/creatures/extractedSouls.json",  	
+        "config/creatures/lycanthrope.json",  
+        "config/creatures/hierophantTent.json",  	
+        "config/creatures/brutusThrall.json"
+	],
+      "heroClasses":
+      [
+       "config/heroclasses-texts.json"
+      ],
+      "spells":
+      [
+       "config/enchantments/attackEnchant.json",
+       "config/enchantments/spellEnchant.json",
+       "config/enchantments/abilityEnchant.json",
+       "config/enchantments/shootingEnchant.json",
+       "config/enchantments/speedEnchant.json",
+       "config/enchantments/preemptiveEnchant.json",
+       "config/enchantments/commanderSummons.json",
+       "config/enchantments/totemMagic.json",
+       "config/enchantments/soulsMagic.json",
+       "config/enchantments/newCommMagic.json",
+       "config/enchantments/dazzlingMagic.json"
+      ],
+      "conflicts":
+      [
+       "wog", 
+       "wake-of-gods.commanders"
+      ]
+}

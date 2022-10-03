@@ -1,0 +1,63 @@
+
+{
+	//Commander receives these bonuses on level-up
+	"bonusPerLevel":
+	[
+		["CREATURE_DAMAGE", 2, 1, 0 ], //+2 minimum damage
+		["CREATURE_DAMAGE", 4, 2, 0 ], //+4 maximum damage
+		["STACK_HEALTH", 20, 1, 0 ], //+20 hp		
+		["SHOTS", 1, 0, 0 ] //+1 shot
+	],
+	//Value of bonuses given by each skill level
+	"skillLevels":
+	[
+		{"name": "ATTACK", "levels": [2, 5, 9, 15, 25]}, //0
+		{"name": "DEFENSE", "levels": [5, 10, 20, 35, 50]}, //1
+		{"name": "HEALTH", "levels": [25, 60, 100, 150, 250]}, //2
+		{"name": "DAMAGE", "levels": [25, 60, 100, 150, 250]}, //3
+		{"name": "SPEED", "levels": [1, 2, 3, 4, 6]}, //4
+		{"name": "SPELL_POWER", "levels": [1, 3, 6, 14, 29]}, //5
+		{"name": "CASTS", "levels": [1, 2, 3, 4, 5]},
+		{"name": "RESISTANCE", "levels": [5, 15, 35, 60, 90]}
+	],
+	"abilityRequirements":
+	[
+		//no combos: attack + def [0, 1] / def + magic [1, 5] / health + sp [2, 4] / dam + magic [3, 5]
+
+		//attack + attack
+		{"ability": ["NO_MELEE_PENALTY", 0, 0, 0 ], "skills": [0,0]},
+		//attack + health
+		{"ability": ["FEAR", 0, 0, 0 ], "skills": [0, 2]},
+		//attack + damage
+		{"ability": ["ENCHANTED", 1, "reworked commanders:spell.attackEnchant", 0 ], "skills": [0, 3]},
+		//attack + speed
+		{"ability": ["ENCHANTED", 1, "reworked commanders:spell.preemptiveEnchant", 0 ], "skills": [0, 4]},
+		//attack + magic
+		{"ability": ["BLOCKS_RETALIATION", 0, 1, 0 ], "skills": [0,5]},
+		
+		//def + health
+		{"ability": ["ENCHANTED", 1, "reworked commanders:spell.abilityEnchant", 0 ], "skills": [1, 2]}, 
+		//def + damage
+		{"ability": ["ENEMY_DEFENCE_REDUCTION", 50, 0, 0 ], "skills": [1, 3]}, 
+		//def + magic
+		{"ability": ["FIRE_SHIELD", 30, 0, 0 ], "skills": [1, 4]},
+
+		//health + health
+		{"ability": ["HP_REGENERATION", 100, 0, 0 ], "skills": [2, 2]},
+		//health + damage
+		{"ability": ["FREE_SHOOTING", 0, 0, 0 ], "skills": [2, 3]},
+		//health + magic
+		{"ability": ["DEATH_STARE", 1, 1, 0 ], "skills": [2, 5]},
+
+		//damage + speed
+		{"ability": ["ENCHANTED", 1, "reworked commanders:spell.shootingEnchant", 0 ], "skills": [3, 4]}, 
+
+		//speed + speed
+		{"ability": ["FLYING", 0, 0, 0 ], "skills": [4,4]},
+		//speed + magic
+		{"ability": ["ENCHANTED", 4, "reworked commanders:spell.speedEnchant", 0 ], "skills": [4, 5]},
+		
+		//magic + magic		
+		{"ability": ["ENCHANTED", 1, "reworked commanders:spell.spellEnchant", 0 ], "skills": [5, 5]}
+	]
+}
