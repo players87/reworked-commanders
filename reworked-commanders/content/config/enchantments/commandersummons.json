@@ -25,7 +25,7 @@
 				"battleEffects":{
 					"summon":{
 						"exclusive":false,
-						"id":"reworked commanders:ogreBallista1",
+						"id":"reworked-commanders:ogreBallista1",
 						"permanent":false,
 						"type":"core:summon"
 					},						
@@ -81,7 +81,7 @@
 				"description": "{Summon Siege Ballista}\r\n\r\nWarmongers always make sure there's at least one ballista in any army they command.",
 				"battleEffects":{
 					"summon":{
-						"id":"reworked commanders:ogreBallista2"
+						"id":"reworked-commanders:ogreBallista2"
 					}
 				}
 				//"power": 2
@@ -119,7 +119,7 @@
 				"battleEffects":{
 					"summon":{
 						"exclusive":false,
-						"id":"reworked commanders:shamanTotem1",
+						"id":"reworked-commanders:shamanTotem1",
 						"permanent":false,
 						"type":"core:summon"
 					},
@@ -172,7 +172,7 @@
 				"description": "{Summon Ancestral Totem}\r\n\r\nShamans channel land's primal magic through totems.",			
 				"battleEffects":{
 				"summon":{
-					"id":"reworked commanders:shamanTotem2"
+					"id":"reworked-commanders:shamanTotem2"
 				}
 			}}
 		},
@@ -209,7 +209,7 @@
 				"battleEffects":{
 					"summon":{
 						"exclusive":false,
-						"id":"reworked commanders:hierophantTent1",
+						"id":"reworked-commanders:hierophantTent1",
 						"permanent":false,
 						"type":"core:summon"
 					},
@@ -263,7 +263,7 @@
 				"description": "{Summon Emergency Tent}\r\n\r\nHierophants always insist on at least one first aid tent for any army they command.",				
 				"battleEffects":{
 				"summon":{
-					"id":"reworked commanders:hierophantTent2"
+					"id":"reworked-commanders:hierophantTent2"
 				}
 			}}
 		},
@@ -669,7 +669,7 @@
 				"battleEffects":{
 					"summon":{
 						"exclusive":false,
-						"id":"reworked commanders:necromancySoul1",
+						"id":"reworked-commanders:necromancySoul1",
 						"permanent":false,
 						"type":"core:summon"
 					},
@@ -1137,7 +1137,7 @@
 				"battleEffects":{
 					"summon":{
 						"exclusive":false,
-						"id":"reworked commanders:abyssalThrall1",
+						"id":"reworked-commanders:abyssalThrall1",
 						"permanent":true,
 						"type":"core:summon"
 					},

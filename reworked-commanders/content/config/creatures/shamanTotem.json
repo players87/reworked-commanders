@@ -57,7 +57,7 @@
 		"graphics" :
 		{
 			"animation": "battle/commander/wendigoTotem.def",
-			"animationTime" : { "attack" : 1, "flight" : 0.8, "idle" : 10, "walk" : 0.8 },
+			"animationTime" : { "attack" : 1, "idle" : 10, "walk" : 0.8 },
 			"iconLarge" : "iconsBig/totemBACK",
 			"iconSmall" : "iconsSmall/smolTotem",
 			"timeBetweenFidgets" : 1
@@ -130,7 +130,7 @@
 		"graphics" :
 		{
 			"animation": "battle/commander/wendigoTotem.def",
-			"animationTime" : { "attack" : 1, "flight" : 0.8, "idle" : 10, "walk" : 0.8 },
+			"animationTime" : { "attack" : 1, "idle" : 10, "walk" : 0.8 },
 			"iconLarge" : "iconsBig/totemBACK",
 			"iconSmall" : "iconsSmall/smolTotem",
 			"timeBetweenFidgets" : 1

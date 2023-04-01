@@ -128,7 +128,7 @@
 			"none":{},"basic":{},"advanced":{},"expert":{}
 		},
 		"targetCondition" : {"allOf" : {},"noneOf" : {},"anyOf" : {		
-            //"reworked commanders:creature.soulEater":"absolute"
+            //"reworked-commanders:creature.soulEater":"absolute"
 		}
 		},		
 		"flags" : {

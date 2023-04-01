@@ -28,8 +28,7 @@
 			{
 				"walk" : 1.00,
 				"idle" : 10.00,
-				"attack" : 1.00,
-				"flight" : 1.00
+				"attack" : 1.00
 			},
 			"missile" :
 			{
@@ -39,9 +38,6 @@
 				"offset" :{	"lowerX" : -22,"lowerY" : 0,
 							"middleX" : 32,"middleY" : -70,
 							"upperX" : 42,"upperY" : -83},
-
-				
-
 				//"offset" :
 				//{
 				//	"lowerX" : 8,
@@ -66,7 +62,7 @@
 			"defend": "PLDNDFND.wav",
 			"killed": "PLDNKILL.wav",
 			"move": "PLDNMOVE.wav",
-                  "shoot" : "zapelectro2",
+            "shoot" : "zapelectro2",
 			"wince": "PLDNWNCE.wav"
 		},
 		"abilities" :
@@ -123,17 +119,16 @@
 
 		"theRadiant" :
 		{
-			"type" : "SIGHT_RADIOUS",
+			"type" : "SIGHT_RADIUS",
 			"val" : 1,
-			"propagator": "HERO"
+			"valueType" : "ADDITIVE_VALUE"
 		},
 			
 		"mentor" :
 		{
-			"type" : "SECONDARY_SKILL_PREMY",
+			"targetSourceType" : "SECONDARY_SKILL",
+			"type" : "HERO_EXPERIENCE_GAIN_PERCENT",
 			"val" : 5,
-			"subtype" : "skill.learning",
-			"propagator": "HERO",
 			"valueType" : "PERCENT_TO_BASE",
 			"updater": "TIMES_HERO_LEVEL"
 		},
@@ -198,9 +193,7 @@
 						"subtype": "spell.lightningSpearEnchant",
 						"limiters": [ "allOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "ENCHANTED", "spell.shootingEnchant"]	} ]
 				}
-				
-			
-
+		
 		}
 	}
 }

@@ -15,7 +15,7 @@
 		"fightValue" : 503,
 		"graphics" : {
 			"animation": "battle/commander/werewolf.def",
-			"animationTime" : { "attack" : 1, "flight" : 1, "idle" : 10, "walk" : 1.0 },
+			"animationTime" : { "attack" : 1, "idle" : 10, "walk" : 1.0 },
 			"iconLarge" : "iconsBig/werewolf_big.png",
 			"iconSmall" : "iconsSmall/werewolf_small.png",
 			"timeBetweenFidgets" : 1

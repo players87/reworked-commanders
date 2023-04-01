@@ -28,8 +28,7 @@
 			{
 				"walk" : 1.00,
 				"idle" : 10.00,
-				"attack" : 1.00,
-				"flight" : 1.00
+				"attack" : 1.00
 			},
 			"missile" :
 			{
@@ -146,7 +145,9 @@
 				"subtype" : "spell.totemsCurseTrigger",
 				"val" : 100,
 				"addInfo" : [0,2],
-				"effectRange" : "ONLY_ENEMY_ARMY"
+				"propagator": "BATTLE_WIDE",
+				"propagationUpdater" : "BONUS_OWNER_UPDATER",
+				"limiters" : [ "OPPOSITE_SIDE" ]
 			},
 			
 			//naklada efekt na jednostki wroga, ktory wskazuje jednostki bedace pod wplywem klatwy, kiedy zostanie "aktywowany" (zaatakowany) totem
@@ -154,7 +155,9 @@
                 "val" : 100,
                     "type" : "MORE_DAMAGE_FROM_SPELL",
                     "subtype" : "spell.totemsCurseTrigger",            
-				"effectRange" : "ONLY_ENEMY_ARMY"
+					"propagator": "BATTLE_WIDE",
+					"propagationUpdater" : "BONUS_OWNER_UPDATER",
+					"limiters" : [ "OPPOSITE_SIDE" ]
             },		
 
 			"noAttacking" : 

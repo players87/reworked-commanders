@@ -17,18 +17,16 @@
  
 		//"flags" : { "offensive": true, "damage": true, "negative" : true, "special" : true },
 		"targetCondition" : {"allOf" : {},"noneOf" : {},"anyOf" : {
-			"core:bonus.KING1":"absolute",				
-			"core:bonus.KING2":"absolute",
-			"core:bonus.KING3":"absolute",	
-			"reworked commanders:creature.brutus":"absolute",	
-			"reworked commanders:creature.soulEater":"absolute",	
-			"reworked commanders:creature.paladin":"absolute",	
-			"reworked commanders:creature.gnollShaman":"absolute",	
-			"reworked commanders:creature.warmonger":"absolute",	
-			"reworked commanders:creature.hierophant":"absolute",	
-			"reworked commanders:creature.astralSpirit":"absolute",	
-			"reworked commanders:creature.templeGuard":"absolute",	
-			"reworked commanders:creature.succub":"absolute"
+			"core:bonus.KING":"absolute",
+			"reworked-commanders:creature.brutus":"absolute",	
+			"reworked-commanders:creature.soulEater":"absolute",	
+			"reworked-commanders:creature.paladin":"absolute",	
+			"reworked-commanders:creature.gnollShaman":"absolute",	
+			"reworked-commanders:creature.warmonger":"absolute",	
+			"reworked-commanders:creature.hierophant":"absolute",	
+			"reworked-commanders:creature.astralSpirit":"absolute",	
+			"reworked-commanders:creature.templeGuard":"absolute",	
+			"reworked-commanders:creature.succub":"absolute"
 		} },	
 		"flags" : {
 			"indifferent": true
@@ -62,9 +60,7 @@
 											"turns": 1,
 								"limiters": [
 					 				"anyOf", 
-					 				{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "KING1"]	},
-									{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "KING2"]	},
-									{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "KING3"]	},
+					 				{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "KING" ]},
 									{"type" : "CREATURE_TYPE_LIMITER", "parameters" : [ "soulEater", true ]	},
 									{"type" : "CREATURE_TYPE_LIMITER", "parameters" : [ "paladin", true ]	},
 									{"type" : "CREATURE_TYPE_LIMITER", "parameters" : [ "gnollShaman", true ]	},

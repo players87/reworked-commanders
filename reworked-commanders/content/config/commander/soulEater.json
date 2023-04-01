@@ -28,8 +28,7 @@
 			{
 				"walk" : 1.00,
 				"idle" : 10.00,
-				"attack" : 1.00,
-				"flight" : 1.00
+				"attack" : 1.00
 			},
 			"missile" :
 			{
@@ -78,10 +77,9 @@
 
 		"necromanter" :
 		{
-			"type" : "SECONDARY_SKILL_PREMY",
+			"targetSourceType" : "SECONDARY_SKILL",
+			"type" : "UNDEAD_RAISE_PERCENTAGE",
 			"val" : 2,
-			"subtype" : "skill.necromancy",
-			"propagator": "HERO",
 			"valueType" : "PERCENT_TO_BASE",
 			"updater": "TIMES_HERO_LEVEL"
 		},
@@ -106,7 +104,9 @@
 		{
 			"type" : "MORE_DAMAGE_FROM_SPELL",
 			"subtype" : "spell.bannerOfDeath",
-			"effectRange" : "ONLY_ENEMY_ARMY",
+			"propagator": "BATTLE_WIDE",
+			"propagationUpdater" : "BONUS_OWNER_UPDATER",
+			"limiters" : [ "OPPOSITE_SIDE" ],
 			"val" : 100
 		},
 		

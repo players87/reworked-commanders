@@ -26,9 +26,11 @@
 				},
 
 				"king1" :
-					{
-						"type" : "KING1"
-					},
+				{
+					"type" : "KING",
+					"val" : 0,
+					"valueType" : "ADDITIVE_VALUE"
+				},
 					"flier" :
 					{
 						"type" : "FLYING",
@@ -133,7 +135,7 @@
 		"graphics" :
 		{
 			"animation": "battle/commander/soulghost.def",
-			"animationTime" : { "attack" : 1, "flight" : 0.8, "idle" : 10, "walk" : 0.8 },
+			"animationTime" : { "attack" : 1, "idle" : 10, "walk" : 0.8 },
 			"iconLarge" : "iconsBig/soulBACK",
 			"iconSmall" : "iconsSmall/smolsoul",
 			"timeBetweenFidgets" : 1
@@ -261,7 +263,7 @@
 		"graphics" :
 		{
 			"animation": "battle/commander/expghost.def",
-			"animationTime" : { "attack" : 1, "flight" : 0.8, "idle" : 10, "walk" : 0.8 },
+			"animationTime" : { "attack" : 1, "idle" : 10, "walk" : 0.8 },
 			"iconLarge" : "iconsBig/expBACK",
 			"iconSmall" : "iconsSmall/smolexp",
 			"timeBetweenFidgets" : 1

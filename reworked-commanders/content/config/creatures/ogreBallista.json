@@ -48,7 +48,7 @@
 		"graphics" :
 		{
 			"animation": "battle/commander/ballistaTurret.def",
-			"animationTime" : { "attack" : 1, "flight" : 0.8, "idle" : 10, "walk" : 0.8 },
+			"animationTime" : { "attack" : 1, "idle" : 10, "walk" : 0.8 },
 			"iconLarge" : "iconsBig/CPrL146M",
 			"iconSmall" : "iconsSmall/CPrS146M",
 			"timeBetweenFidgets" : 1,
@@ -129,7 +129,7 @@
 		"graphics" :
 		{
 			"animation": "battle/commander/ballistaTurret.def",
-			"animationTime" : { "attack" : 1, "flight" : 0.8, "idle" : 10, "walk" : 0.8 },
+			"animationTime" : { "attack" : 1, "idle" : 10, "walk" : 0.8 },
 			"iconLarge" : "iconsBig/CPrL146M",
 			"iconSmall" : "iconsSmall/CPrS146M",
 			"timeBetweenFidgets" : 1,

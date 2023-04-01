@@ -20,7 +20,7 @@
 			"core:bonus.SIEGE_WEAPON":"absolute",	
 			"core:creature.troglodyte":"absolute",	
 			"core:creature.infernalTroglodyte":"absolute",	
-			"reworked commanders:creature.abyssalThrall1":"absolute"
+			"reworked-commanders:creature.abyssalThrall1":"absolute"
             },"anyOf" : {} },	
 		"flags" : {
 			"negative": true

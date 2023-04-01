@@ -41,7 +41,7 @@
 		"graphics" :
 		{
 			"animation": "battle/commander/m145.def",
-			"animationTime" : { "attack" : 1, "flight" : 0.8, "idle" : 10, "walk" : 0.8 },
+			"animationTime" : { "attack" : 1, "idle" : 10, "walk" : 0.8 },
 			"iconLarge" : "iconsBig/thrallBACK",
 			"iconSmall" : "iconsSmall/m145sma",
 			"timeBetweenFidgets" : 1

@@ -52,7 +52,7 @@
 		"graphics" :
 		{
 			"animation": "battle/commander/firstaidTent.def",
-			"animationTime" : { "attack" : 1, "flight" : 0.8, "idle" : 10, "walk" : 0.8 },
+			"animationTime" : { "attack" : 1, "idle" : 10, "walk" : 0.8 },
 			"iconLarge" : "iconsBig/CPrL147M",
 			"iconSmall" : "iconsSmall/CPrS147M",
 			"timeBetweenFidgets" : 1
@@ -117,7 +117,7 @@
 		"graphics" :
 		{
 			"animation": "battle/commander/firstaidTent.def",
-			"animationTime" : { "attack" : 1, "flight" : 0.8, "idle" : 10, "walk" : 0.8 },
+			"animationTime" : { "attack" : 1, "idle" : 10, "walk" : 0.8 },
 			"iconLarge" : "iconsBig/CPrL147M",
 			"iconSmall" : "iconsSmall/CPrS147M",
 			"timeBetweenFidgets" : 1

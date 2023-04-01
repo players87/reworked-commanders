@@ -48,8 +48,8 @@
 			"none":{},"basic":{},"advanced":{},"expert":{}
 		},
 		"targetCondition" : {"allOf" : {},"noneOf" : {},"anyOf" : {		
-			"reworked commanders:creature.shamanTotem1":"absolute",	
-			"reworked commanders:creature.shamanTotem2":"absolute"
+			"reworked-commanders:creature.shamanTotem1":"absolute",	
+			"reworked-commanders:creature.shamanTotem2":"absolute"
 		}
 		},		
 		"flags" : {

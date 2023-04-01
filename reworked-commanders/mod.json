@@ -2,14 +2,31 @@
 	"name" : "Reworked Commanders",
 	"description" : "Reworked commanders for original factions. Loosely based on abilities and design of WoG commanders.",
 	
-	"version" : "1.11",
+	"version" : "1.2",
 	"author" : "Concept and most Commanders' graphics - WoG Team; New Commanders Mod - Avatar support and MinosKing; Werewolf def - MDT; Orange Orc def - HotA Team; Idea and implemetation - Andruids; Sunseeker def - Andruids, based on Kuririn's Crusader; Totem def - Andruids, based on Rettosukero's Wendigo.",
 	"contact" : "",
 	"modType" : "Creatures",
 	"compatibility" :
 	{
-		"min" : "1.0.0"
-	},	
+		"min" : "1.2.0"
+	},
+	"changelog" :
+	{
+		"1.0"   : ["Initial release"],
+		"1.1"   : ["Graphic and balance fixes"],
+		"1.11"  : ["Some refreshed graphics"],
+		"1.2"   : ["Update to vcmi-1.2"]
+	},
+	"settings":
+	{
+		"modules":
+		{
+			"commanders": true
+		},
+		"combat": {
+			"badLuckDice" : [ 12, 6, 4 ]
+		}
+	},
 	"creatures" :
 	[
         "config/commander/astralSpirit.json",
@@ -48,7 +65,6 @@
       ],
       "conflicts":
       [
-       "wog", 
        "wake-of-gods.commanders"
       ]
 }
