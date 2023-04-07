@@ -121,7 +121,8 @@
 		{
 			"type" : "SIGHT_RADIUS",
 			"val" : 1,
-			"valueType" : "ADDITIVE_VALUE"
+			"valueType" : "ADDITIVE_VALUE",
+			"propagator": "HERO"
 		},
 			
 		"mentor" :
@@ -130,6 +131,7 @@
 			"type" : "HERO_EXPERIENCE_GAIN_PERCENT",
 			"val" : 5,
 			"valueType" : "PERCENT_TO_BASE",
+			"propagator": "HERO",
 			"updater": "TIMES_HERO_LEVEL"
 		},
 
