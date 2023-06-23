@@ -53,7 +53,7 @@
 		},
 		"doubleWide" : false,
 		"growth" : 1,
-		"hitPoints" : 50,
+		"hitPoints" : 150,
 		"speed" : 5,
             "shots" : 0,
 		"sound" :
